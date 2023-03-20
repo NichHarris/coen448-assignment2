@@ -12,13 +12,15 @@ public class UserInputHandler {
         Scanner input = new Scanner(System.in);
         while (true) {
             String line = input.nextLine();
-            if ("bye".equalsIgnoreCase(line)) {
+            if ("bye".equalsIgnoreCase(line) || "quit".equalsIgnoreCase(line) || "exit".equalsIgnoreCase(line)) {
                 userData.add(line);
                 break;
             }
             userData.add(line);
         }
+        input.close();
         return userData;
+
     }
 
     public static void main(String[] args) {
