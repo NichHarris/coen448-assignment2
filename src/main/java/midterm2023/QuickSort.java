@@ -25,9 +25,9 @@ public class QuickSort {
 
 	int partition(E[] A, int l, int r, E pivot) {
 		do {// Move bounds inward until they meet
-			
+
 			while (A[++l].compareTo(pivot)<0);
-			
+
 			while ((r!=0) && (A[--r].compareTo(pivot)>0));
 			
 			DSutil.swap(A, l, r);       // Swap out-of-place values
